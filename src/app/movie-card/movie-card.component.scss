@@ -2,8 +2,18 @@
     width: 190px;
     height: 400px;
     background:#FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     box-shadow: 0px 0px 15px rgba(29, 24, 56, 0.1);
     border-radius: 10px;
     padding: 15px 20px;
+    font-family: "Montserrat" ;
+}
+
+.movie-card__img{
+    width: 150px;
+    height: 225px;
+    border-radius: 5px;
 }
 

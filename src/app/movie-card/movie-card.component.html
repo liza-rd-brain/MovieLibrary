@@ -1,5 +1,10 @@
 <div class="movie-card">
     <img src="../../images/{{ movie.id }}.jpeg" class="movie-card__img" />
     <!-- <img src="../images/{{ movie.id }}.jpeg" class="movie-card__img" /> -->
-    <div class="movie-card__wrapper">{{movie.name}}</div>
+    <span class="movie-card__title">{{movie.name}}
+    </span>
+    <div class="movie-card__genre">{{movie.genre}}
+    </div>
+    <span class="movie-card__date">{{movie.year}}
+    </span>
 </div>
