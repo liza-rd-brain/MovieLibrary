@@ -3,14 +3,14 @@ import movieList from '../data.json';
 
 console.log(movieList);
 
-// export interface Product {
-//   id: number;
-//   name: string;
-//   price: number;
-//   year: number;
-//   description: string;
-//   genre: string;
-// }
+//TODO: took out like types??
+export interface MovieItem {
+  id: number;
+  name: string;
+  year: number;
+  description: string;
+  genre: number[];
+}
 
 @Component({
   selector: 'app-movie-list',
