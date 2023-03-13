@@ -1,6 +1,6 @@
 @import "../../style/mixin.scss";
 
-.movie-card{
+.movie-card {
     width: 190px;
     height: 400px;
     background:#FFFFFF;
@@ -12,55 +12,47 @@
     box-shadow: 0px 0px 15px rgba(29, 24, 56, 0.1);
     border-radius: 10px;
     padding: 15px 20px;
-   
 
-}
+    &__content{
+        display: flex;
+        gap:10px;
+        flex-direction: column;
+        align-items: start;
+    }
 
-.movie-card__content{
-    
-    display: flex;
-    gap:10px;
-    flex-direction: column;
-    align-items: start;
+    &__controller{
+        display: flex;
+        align-self: end;
+        margin-top: auto;
+    }
 
-}
+    &__img{
+        width: 150px;
+        height: 225px;
+        border-radius: 5px;
+    }
 
-.movie-card__controller{
-    display: flex;
-    align-self: end;
-    margin-top: auto;
-}
+    &__title{
+        @include fontType(14px,600,16px);
+    }
 
+    &__genre-list{
+        @include fontType(12px,400);
+        flex-wrap: wrap;
+        display: flex;
+        gap:3px
+        
+    }
 
-.movie-card__img{
-    width: 150px;
-    height: 225px;
-    border-radius: 5px;
-}
+    &__date{
+        @include fontType(12px,400);
+    }
 
-.movie-card__title{
-    @include fontType(14px,600,16px);
-}
-
-.movie-card__genre-list{
-    @include fontType(12px,400);
-    flex-wrap: wrap;
-    display: flex;
-    gap:3px
-    
-}
-
-.movie-card__date{
-    @include fontType(12px,400);
-}
-
-.movie-card__button{
-    position: absolute;
-    bottom:12px;
-    right:12px;
-
-
-
+    &__button{
+        position: absolute;
+        bottom:12px;
+        right:12px;
+    }
 }
 
 
