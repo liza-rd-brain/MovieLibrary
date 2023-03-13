@@ -9,7 +9,7 @@
         <div class="movie-card__date">{{movie.year}}
         </div>
 
-        <button *ngIf="isHover" class="movie-card__button" mat-icon-button color="none">
+        <button *ngIf="isHover" class="movie-card__button" mat-icon-button color="none" (click)="setBestMovie()">
             <mat-icon>{{'favorite_outline'}}</mat-icon>
         </button>
 
