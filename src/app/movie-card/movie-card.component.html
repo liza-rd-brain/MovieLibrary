@@ -1,11 +1,12 @@
 <div class="movie-card">
-    <img src="../../images/{{ movie.id }}.jpeg" class="movie-card__img" />
-    <!-- <img src="../images/{{ movie.id }}.jpeg" class="movie-card__img" /> -->
-    <div class="movie-card__title">{{movie.name}}
+    <div class="movie-card__content"> <img src="../../images/{{ movie.id }}.jpeg" class="movie-card__img" />
+        <!-- <img src="../images/{{ movie.id }}.jpeg" class="movie-card__img" /> -->
+        <div class="movie-card__title">{{movie.name}}
+        </div>
+        <div class="movie-card__genre-list">
+            <span *ngFor="let genre of getGenre(movie.genre)">{{genre}}</span>
+        </div>
+        <div class="movie-card__date">{{movie.year}}
+        </div>
+        <button class="movie-card__button" mat-icon-button color="none"><mat-icon>favorite_outline</mat-icon></button>
     </div>
-    <div class="movie-card__genre-list">
-        <span *ngFor="let genre of getGenre(movie.genre)">{{genre}}</span>
-    </div>
-    <div class="movie-card__date">{{movie.year}}
-    </div>
-</div>
