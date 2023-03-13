@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { MovieItem } from '../movie-list/movie-list.component';
-import { GetGenreService } from '../get-genre.service';
+import { GetGenreService } from '../service/get-genre.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -18,7 +18,6 @@ export class MovieCardComponent {
   }
 
   onMouseEnter() {
-    console.log('hover Event');
     this.isHover = true;
   }
 
