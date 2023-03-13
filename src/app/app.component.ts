@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import movieList from './data.json';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'movie';
+  captiontext = ['Популярные фильмы', 'Самый лучший фильм'];
+  movieList = [...movieList];
 }

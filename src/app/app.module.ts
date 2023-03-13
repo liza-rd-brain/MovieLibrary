@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { CaptionComponent } from './caption/caption.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
@@ -13,7 +13,7 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    CaptionComponent,
     MovieListComponent,
     MovieCardComponent,
   ],

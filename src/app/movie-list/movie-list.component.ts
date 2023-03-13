@@ -1,7 +1,4 @@
-import { Component } from '@angular/core';
-import movieList from '../data.json';
-
-console.log(movieList);
+import { Component, Input } from '@angular/core';
 
 //TODO: took out like types??
 export interface MovieItem {
@@ -18,5 +15,6 @@ export interface MovieItem {
   styleUrls: ['./movie-list.component.scss'],
 })
 export class MovieListComponent {
-  movieList = [...movieList];
+  @Input() movieList!: MovieItem[];
+  // movieList = [...movieList];
 }
