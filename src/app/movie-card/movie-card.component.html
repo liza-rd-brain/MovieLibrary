@@ -1,10 +1,11 @@
 <div class="movie-card">
     <img src="../../images/{{ movie.id }}.jpeg" class="movie-card__img" />
     <!-- <img src="../images/{{ movie.id }}.jpeg" class="movie-card__img" /> -->
-    <span class="movie-card__title">{{movie.name}}
-    </span>
-    <div class="movie-card__genre">{{getGenre(movie.genre)}}
+    <div class="movie-card__title">{{movie.name}}
     </div>
-    <span class="movie-card__date">{{movie.year}}
-    </span>
+    <div class="movie-card__genre-list">
+        <span *ngFor="let genre of getGenre(movie.genre)">{{genre}}</span>
+    </div>
+    <div class="movie-card__date">{{movie.year}}
+    </div>
 </div>

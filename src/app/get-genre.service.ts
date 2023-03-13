@@ -22,8 +22,18 @@ export class GetGenreService {
   ];
 
   getGenreNameList(genreNumberList: number[]) {
-    return genreNumberList.reduce((prevList: string[], genreNumber: number) => {
-      return [...prevList, this.genre[genreNumber]];
-    }, []);
+    return genreNumberList.reduce(
+      (prevList: string[], genreNumber: number, index: number) => {
+        const hasСomma =
+          genreNumberList.length > 1 && genreNumberList.length - 1 > index;
+
+        console.log(hasСomma);
+        return [
+          ...prevList,
+          `${this.genre[genreNumber - 1]}${hasСomma ? ', ' : ''}`,
+        ];
+      },
+      []
+    );
   }
 }
