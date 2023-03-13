@@ -17,9 +17,9 @@ export class MovieCardComponent {
   @Input() movie!: MovieItem;
   @Input() isHover!: boolean;
 
-  setBestMovie() {
+  changeBestMovie() {
     const movieJSON = JSON.stringify(this.movie);
-    this.localStorageService.saveData(String(this.movie.id), movieJSON);
+    this.localStorageService.changeData(movieJSON);
   }
 
   getGenre(genreNumberList: number[]) {
