@@ -27,7 +27,6 @@ export class GetGenreService {
         const hasСomma =
           genreNumberList.length > 1 && genreNumberList.length - 1 > index;
 
-        console.log(hasСomma);
         return [
           ...prevList,
           `${this.genre[genreNumber - 1]}${hasСomma ? ', ' : ''}`,

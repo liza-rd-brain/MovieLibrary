@@ -11,8 +11,18 @@ import { GetGenreService } from '../get-genre.service';
 export class MovieCardComponent {
   constructor(private genreService: GetGenreService) {}
   @Input() movie!: MovieItem;
+  @Input() isHover!: boolean;
 
   getGenre(genreNumberList: number[]) {
     return this.genreService.getGenreNameList(genreNumberList);
+  }
+
+  onMouseEnter() {
+    console.log('hover Event');
+    this.isHover = true;
+  }
+
+  onMouseOut() {
+    this.isHover = false;
   }
 }
